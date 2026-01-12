@@ -1,0 +1,47 @@
+vnc 설정
+sudo raspi-config
+ifconfig
+
+라이브러리 설치
+sudo apt update
+
+sudo apt upgrade -y
+
+sudo reboot
+
+sudo apt install python3.11 python3.11-venv python3.11-dev -y
+
+python3 --version
+
+python3 -m venv ai-env
+
+source ai-env/bin/activate
+
+sudo apt install -y \
+build-essential \
+cmake \
+pkg-config \
+libatlas-base-dev \
+libopenblas-dev \
+liblapack-dev \
+libjpeg-dev \
+libpng-dev \
+libfreetype6-dev \
+libgl1-mesa-dev \
+libglib2.0-0 \
+libsdl2-dev \
+libsdl2-image-dev \
+libsdl2-mixer-dev \
+libsdl2-ttf-dev
+
+python3.11 -m pip install --upgrade pip
+
+python3.11 -m pip install "numpy<2.0"
+
+pip3 install torch torchvision torchaudio
+
+pip install gymnasium
+
+pip install pygame
+
+pip install tflite-runtime
